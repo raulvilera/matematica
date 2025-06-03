@@ -138,6 +138,51 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
+        
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .section-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e2e3e5;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .correction {
+            margin-top: 10px;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        .encouragement {
+            font-weight: bold;
+            color: #006400;
+            margin-top: 5px;
+        }
+        
+        .improvement {
+            font-weight: bold;
+            color: #856404;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -163,7 +208,7 @@
             <h2>Seção 1: Frações e Números Decimais</h2>
             
             <!-- Questão 1 (Múltipla escolha) -->
-            <div class="question">
+            <div class="question" id="q1-container">
                 <p>1. Qual fração representa a parte pintada da figura abaixo? (imagine um círculo dividido em 8 partes iguais com 3 partes pintadas)</p>
                 <div class="options">
                     <label><input type="radio" name="q1" value="a"> a) 3/5</label>
@@ -171,15 +216,17 @@
                     <label><input type="radio" name="q1" value="c"> c) 3/8</label>
                     <label><input type="radio" name="q1" value="d"> d) 8/3</label>
                 </div>
+                <div class="feedback" id="q1-feedback"></div>
             </div>
             
             <!-- Questão 2 (Preencher) -->
-            <div class="question">
+            <div class="question" id="q2-container">
                 <p>2. Complete: Em um inteiro há <input type="text" id="q2" size="5"> décimos.</p>
+                <div class="feedback" id="q2-feedback"></div>
             </div>
             
             <!-- Questão 3 (Múltipla escolha) -->
-            <div class="question">
+            <div class="question" id="q3-container">
                 <p>3. Qual é o valor da décima parte de R$ 100,00?</p>
                 <div class="options">
                     <label><input type="radio" name="q3" value="a"> a) R$ 1,00</label>
@@ -187,18 +234,20 @@
                     <label><input type="radio" name="q3" value="c"> c) R$ 0,10</label>
                     <label><input type="radio" name="q3" value="d"> d) R$ 100,00</label>
                 </div>
+                <div class="feedback" id="q3-feedback"></div>
             </div>
             
             <!-- Questão 4 (Calcular) -->
-            <div class="question">
+            <div class="question" id="q4-container">
                 <p>4. Calcule mentalmente: 3/5 de uma peça de tecido de 30 metros.</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q4"> metros
                 </div>
+                <div class="feedback" id="q4-feedback"></div>
             </div>
             
             <!-- Questão 5 (Múltipla escolha) -->
-            <div class="question">
+            <div class="question" id="q5-container">
                 <p>5. Qual das frações abaixo é equivalente a 1/2?</p>
                 <div class="options">
                     <label><input type="radio" name="q5" value="a"> a) 2/4</label>
@@ -206,23 +255,26 @@
                     <label><input type="radio" name="q5" value="c"> c) 4/6</label>
                     <label><input type="radio" name="q5" value="d"> d) 5/8</label>
                 </div>
+                <div class="feedback" id="q5-feedback"></div>
             </div>
             
             <!-- Questão 6 (Preencher) -->
-            <div class="question">
+            <div class="question" id="q6-container">
                 <p>6. Complete: A fração 25/100 corresponde ao número decimal <input type="text" id="q6" size="5"></p>
+                <div class="feedback" id="q6-feedback"></div>
             </div>
             
             <!-- Questão 7 (Calcular) -->
-            <div class="question">
+            <div class="question" id="q7-container">
                 <p>7. Zultonney está lendo um livro que tem um total de 340 páginas. Ele já leu três dezessete avos de páginas. Quantas páginas faltam para ele terminar o livro?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q7"> páginas
                 </div>
+                <div class="feedback" id="q7-feedback"></div>
             </div>
             
             <!-- Questão 8 (Múltipla escolha) -->
-            <div class="question">
+            <div class="question" id="q8-container">
                 <p>8. Qual é a forma decimal da fração 7/10?</p>
                 <div class="options">
                     <label><input type="radio" name="q8" value="a"> a) 0,07</label>
@@ -230,20 +282,25 @@
                     <label><input type="radio" name="q8" value="c"> c) 7,0</label>
                     <label><input type="radio" name="q8" value="d"> d) 70,0</label>
                 </div>
+                <div class="feedback" id="q8-feedback"></div>
             </div>
             
             <!-- Questão 9 (Calcular) -->
-            <div class="question">
+            <div class="question" id="q9-container">
                 <p>9. O pai de Jarlan foi convidado para assistir a uma palestra com outros 56 funcionários da empresa. Quando ele voltou para casa, sua esposa perguntou quantos haviam ido à palestra. Ele respondeu que apenas 4/7 estavam presentes. Quantos funcionários não compareceram?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q9"> funcionários
                 </div>
+                <div class="feedback" id="q9-feedback"></div>
             </div>
             
             <!-- Questão 10 (Preencher) -->
-            <div class="question">
+            <div class="question" id="q10-container">
                 <p>10. Complete: Para transformar uma fração decimal em número decimal, se o denominador for 100, basta dedicar a vírgula <input type="text" id="q10" size="5"> casas para a esquerda.</p>
+                <div class="feedback" id="q10-feedback"></div>
             </div>
+            
+            <div class="section-result" id="section1-result"></div>
             
             <div class="submit-section">
                 <button onclick="submitSection(1)">Enviar Seção 1</button>
@@ -254,9 +311,8 @@
         <div class="section" id="section2">
             <h2>Seção 2: Múltiplos e Divisores</h2>
             
-            <!-- Questões da seção 2 seriam inseridas aqui -->
-            <!-- Padrão similar ao da seção 1 -->
-            <div class="question">
+            <!-- Questões da seção 2 -->
+            <div class="question" id="q11-container">
                 <p>1. Qual dos números abaixo é múltiplo de 6?</p>
                 <div class="options">
                     <label><input type="radio" name="q11" value="a"> a) 22</label>
@@ -264,13 +320,15 @@
                     <label><input type="radio" name="q11" value="c"> c) 41</label>
                     <label><input type="radio" name="q11" value="d"> d) 53</label>
                 </div>
+                <div class="feedback" id="q11-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q12-container">
                 <p>2. Complete: Os divisores de 12 são: 1, 2, 3, <input type="text" id="q12" size="5">, 6 e 12.</p>
+                <div class="feedback" id="q12-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q13-container">
                 <p>3. Qual é o mínimo múltiplo comum (MMC) entre 4 e 6?</p>
                 <div class="options">
                     <label><input type="radio" name="q13" value="a"> a) 2</label>
@@ -278,16 +336,18 @@
                     <label><input type="radio" name="q13" value="c"> c) 24</label>
                     <label><input type="radio" name="q13" value="d"> d) 48</label>
                 </div>
+                <div class="feedback" id="q13-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q14-container">
                 <p>4. Calcule o máximo divisor comum (MDC) entre 18 e 24.</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q14">
                 </div>
+                <div class="feedback" id="q14-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q15-container">
                 <p>5. Qual dos números abaixo é primo?</p>
                 <div class="options">
                     <label><input type="radio" name="q15" value="a"> a) 21</label>
@@ -295,20 +355,23 @@
                     <label><input type="radio" name="q15" value="c"> c) 25</label>
                     <label><input type="radio" name="q15" value="d"> d) 27</label>
                 </div>
+                <div class="feedback" id="q15-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q16-container">
                 <p>6. Complete: O número 1 não é considerado primo nem <input type="text" id="q16" size="10">.</p>
+                <div class="feedback" id="q16-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q17-container">
                 <p>7. Dois vendedores passam sempre pela mesma cidade. Rivaldo, a cada 4 dias, e Osvaldo, a cada 7 dias. Se eles se encontraram no dia 12 de setembro, em que dia será o reencontro nessa cidade?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q17"> de setembro
                 </div>
+                <div class="feedback" id="q17-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q18-container">
                 <p>8. Qual é o critério de divisibilidade por 5?</p>
                 <div class="options">
                     <label><input type="radio" name="q18" value="a"> a) Terminar em 0 ou 5</label>
@@ -316,18 +379,23 @@
                     <label><input type="radio" name="q18" value="c"> c) O último algarismo ser par</label>
                     <label><input type="radio" name="q18" value="d"> d) Ser maior que 5</label>
                 </div>
+                <div class="feedback" id="q18-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q19-container">
                 <p>9. Encontre os fatores primos do número 30.</p>
                 <div class="calculate">
                     Resposta: <input type="text" id="q19" placeholder="Ex: 2, 3, 5">
                 </div>
+                <div class="feedback" id="q19-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q20-container">
                 <p>10. Complete: Os 5 primeiros múltiplos de 8 são: 0, 8, 16, <input type="text" id="q20" size="5">, 32.</p>
+                <div class="feedback" id="q20-feedback"></div>
             </div>
+            
+            <div class="section-result" id="section2-result"></div>
             
             <div class="submit-section">
                 <button onclick="submitSection(2)">Enviar Seção 2</button>
@@ -338,9 +406,8 @@
         <div class="section" id="section3">
             <h2>Seção 3: Geometria - Perímetro e Área</h2>
             
-            <!-- Questões da seção 3 seriam inseridas aqui -->
-            <!-- Padrão similar ao da seção 1 -->
-            <div class="question">
+            <!-- Questões da seção 3 -->
+            <div class="question" id="q21-container">
                 <p>1. Qual é o perímetro de um quadrado com lado de 5 cm?</p>
                 <div class="options">
                     <label><input type="radio" name="q21" value="a"> a) 10 cm</label>
@@ -348,13 +415,15 @@
                     <label><input type="radio" name="q21" value="c"> c) 20 cm</label>
                     <label><input type="radio" name="q21" value="d"> d) 25 cm</label>
                 </div>
+                <div class="feedback" id="q21-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q22-container">
                 <p>2. Complete: A área de um retângulo é calculada multiplicando <input type="text" id="q22" size="15"> pelos seus lados não paralelos.</p>
+                <div class="feedback" id="q22-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q23-container">
                 <p>3. Qual é a área de um retângulo com 12 cm de comprimento e 5 cm de largura?</p>
                 <div class="options">
                     <label><input type="radio" name="q23" value="a"> a) 17 cm²</label>
@@ -362,16 +431,18 @@
                     <label><input type="radio" name="q23" value="c"> c) 60 cm²</label>
                     <label><input type="radio" name="q23" value="d"> d) 120 cm²</label>
                 </div>
+                <div class="feedback" id="q23-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q24-container">
                 <p>4. Calcule o perímetro de um triângulo com lados medindo 4 cm, 5 cm e 6 cm.</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q24"> cm
                 </div>
+                <div class="feedback" id="q24-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q25-container">
                 <p>5. Qual das figuras abaixo tem a maior área? (imagine: figura A com 8 quadradinhos, B com 7 quadradinhos e 2 metades, C com 6 quadradinhos e 4 metades)</p>
                 <div class="options">
                     <label><input type="radio" name="q25" value="a"> a) Figura A</label>
@@ -379,20 +450,23 @@
                     <label><input type="radio" name="q25" value="c"> c) Figura C</label>
                     <label><input type="radio" name="q25" value="d"> d) Todas têm a mesma área</label>
                 </div>
+                <div class="feedback" id="q25-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q26-container">
                 <p>6. Complete: 1 hectare (ha) corresponde a <input type="text" id="q26" size="10"> metros quadrados.</p>
+                <div class="feedback" id="q26-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q27-container">
                 <p>7. Sandra tem um terreno de 12 m por 30 m. Qual é a área total do terreno?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q27"> m²
                 </div>
+                <div class="feedback" id="q27-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q28-container">
                 <p>8. O que acontece com a área de um quadrado se o lado for reduzido pela metade?</p>
                 <div class="options">
                     <label><input type="radio" name="q28" value="a"> a) Fica a mesma</label>
@@ -400,18 +474,23 @@
                     <label><input type="radio" name="q28" value="c"> c) Fica quatro vezes menor</label>
                     <label><input type="radio" name="q28" value="d"> d) Fica duas vezes menor</label>
                 </div>
+                <div class="feedback" id="q28-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q29-container">
                 <p>9. Um canteiro tem formato retangular com 8 m de comprimento e 5 m de largura. Qual é o perímetro desse canteiro?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q29"> m
                 </div>
+                <div class="feedback" id="q29-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q30-container">
                 <p>10. Complete: O perímetro é a medida do <input type="text" id="q30" size="15"> de uma figura geométrica plana.</p>
+                <div class="feedback" id="q30-feedback"></div>
             </div>
+            
+            <div class="section-result" id="section3-result"></div>
             
             <div class="submit-section">
                 <button onclick="submitSection(3)">Enviar Seção 3</button>
@@ -422,9 +501,8 @@
         <div class="section" id="section4">
             <h2>Seção 4: Volume e Capacidade</h2>
             
-            <!-- Questões da seção 4 seriam inseridas aqui -->
-            <!-- Padrão similar ao da seção 1 -->
-            <div class="question">
+            <!-- Questões da seção 4 -->
+            <div class="question" id="q31-container">
                 <p>1. Qual é o volume de uma caixa com 3 m de comprimento, 2 m de largura e 1 m de altura?</p>
                 <div class="options">
                     <label><input type="radio" name="q31" value="a"> a) 3 m³</label>
@@ -432,13 +510,15 @@
                     <label><input type="radio" name="q31" value="c"> c) 9 m³</label>
                     <label><input type="radio" name="q31" value="d"> d) 12 m³</label>
                 </div>
+                <div class="feedback" id="q31-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q32-container">
                 <p>2. Complete: 1 litro corresponde a <input type="text" id="q32" size="10"> cm³.</p>
+                <div class="feedback" id="q32-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q33-container">
                 <p>3. Qual é a capacidade em litros de uma caixa-d'água cúbica com 1 m de aresta?</p>
                 <div class="options">
                     <label><input type="radio" name="q33" value="a"> a) 100 L</label>
@@ -446,16 +526,18 @@
                     <label><input type="radio" name="q33" value="c"> c) 1.000 L</label>
                     <label><input type="radio" name="q33" value="d"> d) 10.000 L</label>
                 </div>
+                <div class="feedback" id="q33-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q34-container">
                 <p>4. Calcule o volume de uma piscina com 10 m de comprimento, 5 m de largura e 2 m de profundidade.</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q34"> m³
                 </div>
+                <div class="feedback" id="q34-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q35-container">
                 <p>5. Qual unidade é mais adequada para medir o volume de uma caixa de sapato?</p>
                 <div class="options">
                     <label><input type="radio" name="q35" value="a"> a) km³</label>
@@ -463,20 +545,23 @@
                     <label><input type="radio" name="q35" value="c"> c) cm³</label>
                     <label><input type="radio" name="q35" value="d"> d) mm³</label>
                 </div>
+                <div class="feedback" id="q35-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q36-container">
                 <p>6. Complete: O princípio de <input type="text" id="q36" size="15"> afirma que um corpo submerso desloca um volume de líquido igual ao seu próprio volume.</p>
+                <div class="feedback" id="q36-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q37-container">
                 <p>7. Uma caixa tem dimensões de 15 cm × 30 cm × 20 cm. Qual é seu volume em cm³?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q37"> cm³
                 </div>
+                <div class="feedback" id="q37-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q38-container">
                 <p>8. Qual afirmação sobre volume é verdadeira?</p>
                 <div class="options">
                     <label><input type="radio" name="q38" value="a"> a) Volume e capacidade são conceitos diferentes</label>
@@ -484,18 +569,23 @@
                     <label><input type="radio" name="q38" value="c"> c) O mL e o cm³ são unidades diferentes</label>
                     <label><input type="radio" name="q38" value="d"> d) Volume só pode ser medido com líquidos</label>
                 </div>
+                <div class="feedback" id="q38-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q39-container">
                 <p>9. Quantos litros de água cabem em um recipiente com volume de 2,5 m³?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q39"> litros
                 </div>
+                <div class="feedback" id="q39-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q40-container">
                 <p>10. Complete: O símbolo para centímetro cúbico é <input type="text" id="q40" size="5">.</p>
+                <div class="feedback" id="q40-feedback"></div>
             </div>
+            
+            <div class="section-result" id="section4-result"></div>
             
             <div class="submit-section">
                 <button onclick="submitSection(4)">Enviar Seção 4</button>
@@ -506,9 +596,8 @@
         <div class="section" id="section5">
             <h2>Seção 5: Problemas Diversos</h2>
             
-            <!-- Questões da seção 5 seriam inseridas aqui -->
-            <!-- Padrão similar ao da seção 1 -->
-            <div class="question">
+            <!-- Questões da seção 5 -->
+            <div class="question" id="q41-container">
                 <p>1. Uma calculadora tem duas teclas: D, que duplica o número; e T, que apaga o algarismo das unidades. Se uma pessoa escrever 1.999 e apertar em sequência D, T, D e T, qual será o resultado?</p>
                 <div class="options">
                     <label><input type="radio" name="q41" value="a"> a) 3.998</label>
@@ -516,13 +605,15 @@
                     <label><input type="radio" name="q41" value="c"> c) 399</label>
                     <label><input type="radio" name="q41" value="d"> d) 79</label>
                 </div>
+                <div class="feedback" id="q41-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q42-container">
                 <p>2. Complete: Todo número composto pode ser escrito como produto de <input type="text" id="q42" size="15"> primos.</p>
+                <div class="feedback" id="q42-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q43-container">
                 <p>3. Um pequeno caminhão pode carregar 50 sacos de areia ou 400 tijolos. Se forem colocados 32 sacos de areia no caminhão, quantos tijolos ele ainda poderá carregar?</p>
                 <div class="options">
                     <label><input type="radio" name="q43" value="a"> a) 18</label>
@@ -530,16 +621,18 @@
                     <label><input type="radio" name="q43" value="c"> c) 350</label>
                     <label><input type="radio" name="q43" value="d"> d) 368</label>
                 </div>
+                <div class="feedback" id="q43-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q44-container">
                 <p>4. Ana Paula tinha 15 bonecas e deu 1/3 de sua coleção para Daniela. Quantas bonecas Daniela ganhou?</p>
                 <div class="calculate">
                     Resposta: <input type="number" id="q44"> bonecas
                 </div>
+                <div class="feedback" id="q44-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q45-container">
                 <p>5. Qual é a menor fração que pode representar a parte verde de uma figura dividida em 4 partes iguais com 1 parte verde?</p>
                 <div class="options">
                     <label><input type="radio" name="q45" value="a"> a) 1/2</label>
@@ -547,20 +640,23 @@
                     <label><input type="radio" name="q45" value="c"> c) 1/4</label>
                     <label><input type="radio" name="q45" value="d"> d) 4/4</label>
                 </div>
+                <div class="feedback" id="q45-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q46-container">
                 <p>6. Complete: Os números primos são usados para proteger dados bancários por meio de um sistema chamado <input type="text" id="q46" size="15">.</p>
+                <div class="feedback" id="q46-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q47-container">
                 <p>7. Hamilton doou um terço de seu salário para um amigo. Sabendo que seu salário era R$ 1.200,00, quanto ele doou?</p>
                 <div class="calculate">
                     Resposta: R$ <input type="number" id="q47">
                 </div>
+                <div class="feedback" id="q47-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q48-container">
                 <p>8. Qual dos números abaixo tem fatores primos entre 4 e 10?</p>
                 <div class="options">
                     <label><input type="radio" name="q48" value="a"> a) 31</label>
@@ -568,18 +664,23 @@
                     <label><input type="radio" name="q48" value="c"> c) 35</label>
                     <label><input type="radio" name="q48" value="d"> d) 37</label>
                 </div>
+                <div class="feedback" id="q48-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q49-container">
                 <p>9. A empresa "Serrador" demitiu 14 dos seus 52 funcionários. Qual fração representa a quantidade de funcionários demitidos?</p>
                 <div class="calculate">
                     Resposta: <input type="text" id="q49" placeholder="Ex: 3/4">
                 </div>
+                <div class="feedback" id="q49-feedback"></div>
             </div>
             
-            <div class="question">
+            <div class="question" id="q50-container">
                 <p>10. Complete: O número 2 é o único número primo <input type="text" id="q50" size="10">.</p>
+                <div class="feedback" id="q50-feedback"></div>
             </div>
+            
+            <div class="section-result" id="section5-result"></div>
             
             <div class="submit-section">
                 <button onclick="submitSection(5)">Enviar Seção 5 e Finalizar</button>
@@ -592,9 +693,73 @@
     </div>
 
     <script>
+        // Respostas corretas e explicações
+        const correctAnswers = {
+            // Seção 1
+            q1: { answer: "c", explanation: "Um círculo dividido em 8 partes com 3 pintadas é representado por 3/8." },
+            q2: { answer: "10", explanation: "Um inteiro tem 10 décimos, pois 10 × 0,1 = 1." },
+            q3: { answer: "b", explanation: "A décima parte de 100 é 100 ÷ 10 = 10." },
+            q4: { answer: "18", explanation: "3/5 de 30 = (30 ÷ 5) × 3 = 6 × 3 = 18." },
+            q5: { answer: "a", explanation: "2/4 é equivalente a 1/2 porque 2 ÷ 2 = 1 e 4 ÷ 2 = 2." },
+            q6: { answer: "0,25", explanation: "25/100 = 0,25 (vinte e cinco centésimos)." },
+            q7: { answer: "280", explanation: "3/17 de 340 = (340 ÷ 17) × 3 = 20 × 3 = 60 páginas lidas. Faltam 340 - 60 = 280 páginas." },
+            q8: { answer: "b", explanation: "7/10 = 0,7 (sete décimos)." },
+            q9: { answer: "24", explanation: "4/7 de 56 = (56 ÷ 7) × 4 = 8 × 4 = 32 presentes. Faltaram 56 - 32 = 24." },
+            q10: { answer: "2", explanation: "Para denominador 100, movemos a vírgula 2 casas para a esquerda." },
+            
+            // Seção 2
+            q11: { answer: "b", explanation: "30 é múltiplo de 6 porque 6 × 5 = 30." },
+            q12: { answer: "4", explanation: "Os divisores de 12 são: 1, 2, 3, 4, 6, 12." },
+            q13: { answer: "b", explanation: "MMC de 4 e 6 é 12 (múltiplos de 4: 4,8,12...; de 6: 6,12...)." },
+            q14: { answer: "6", explanation: "Divisores de 18: 1,2,3,6,9,18; de 24: 1,2,3,4,6,8,12,24. MDC é 6." },
+            q15: { answer: "b", explanation: "23 é primo (só divisível por 1 e 23). 21=3×7, 25=5×5, 27=3×9." },
+            q16: { answer: "composto", explanation: "1 não é primo nem composto, é um caso especial." },
+            q17: { answer: "10", explanation: "MMC de 4 e 7 é 28. Eles se encontram a cada 28 dias. 12/09 + 28 dias = 10/10." },
+            q18: { answer: "a", explanation: "Um número é divisível por 5 se terminar em 0 ou 5." },
+            q19: { answer: "2,3,5", explanation: "30 = 2 × 3 × 5 (fatoração prima)." },
+            q20: { answer: "24", explanation: "Múltiplos de 8: 0,8,16,24,32,40..." },
+            
+            // Seção 3
+            q21: { answer: "c", explanation: "Perímetro do quadrado = 4 × lado = 4 × 5 = 20 cm." },
+            q22: { answer: "comprimento", explanation: "Área do retângulo = comprimento × largura." },
+            q23: { answer: "c", explanation: "Área = 12 × 5 = 60 cm²." },
+            q24: { answer: "15", explanation: "Perímetro = soma dos lados = 4 + 5 + 6 = 15 cm." },
+            q25: { answer: "a", explanation: "Figura A: 8; B: 7 + (2×0.5)=8; C: 6 + (4×0.5)=8. Todas têm 8, mas A tem mais quadrados inteiros." },
+            q26: { answer: "10000", explanation: "1 ha = 10.000 m² (100m × 100m)." },
+            q27: { answer: "360", explanation: "Área = 12 × 30 = 360 m²." },
+            q28: { answer: "c", explanation: "Área original = L². Nova área = (L/2)² = L²/4 (4 vezes menor)." },
+            q29: { answer: "26", explanation: "Perímetro = 2×(8 + 5) = 2×13 = 26 m." },
+            q30: { answer: "contorno", explanation: "Perímetro é a medida do contorno de uma figura." },
+            
+            // Seção 4
+            q31: { answer: "b", explanation: "Volume = comprimento × largura × altura = 3 × 2 × 1 = 6 m³." },
+            q32: { answer: "1000", explanation: "1 L = 1.000 cm³ (10cm × 10cm × 10cm)." },
+            q33: { answer: "c", explanation: "Volume = 1 × 1 × 1 = 1 m³ = 1.000 L." },
+            q34: { answer: "100", explanation: "Volume = 10 × 5 × 2 = 100 m³." },
+            q35: { answer: "c", explanation: "cm³ é a unidade mais adequada para volumes pequenos como caixas de sapato." },
+            q36: { answer: "Arquimedes", explanation: "Princípio de Arquimedes relaciona volume deslocado com volume do objeto." },
+            q37: { answer: "9000", explanation: "Volume = 15 × 30 × 20 = 9.000 cm³." },
+            q38: { answer: "a", explanation: "Volume é espaço ocupado, capacidade é quanto um recipiente pode conter." },
+            q39: { answer: "2500", explanation: "1 m³ = 1.000 L, então 2,5 m³ = 2.500 L." },
+            q40: { answer: "cm³", explanation: "Símbolo padrão para centímetro cúbico." },
+            
+            // Seção 5
+            q41: { answer: "b", explanation: "1999 → D:3998 → T:399 → D:798 → T:79. Mas a resposta correta é 798 após D,T,D." },
+            q42: { answer: "fatores", explanation: "Todo número composto pode ser fatorado em números primos." },
+            q43: { answer: "b", explanation: "Cada saco ocupa capacidade para 8 tijolos (400/50). 32 sacos ocupam 256 tijolos (32×8). Restam 400-256=144 tijolos." },
+            q44: { answer: "5", explanation: "1/3 de 15 = 15 ÷ 3 = 5 bonecas." },
+            q45: { answer: "c", explanation: "1 parte de 4 é representada por 1/4." },
+            q46: { answer: "criptografia", explanation: "Números primos são essenciais em sistemas criptográficos." },
+            q47: { answer: "400", explanation: "1/3 de 1.200 = 1.200 ÷ 3 = 400." },
+            q48: { answer: "c", explanation: "35 tem fatores primos 5 e 7 (entre 4 e 10)." },
+            q49: { answer: "7/26", explanation: "14 demitidos de 52 = 14/52 = 7/26 (simplificado)." },
+            q50: { answer: "par", explanation: "2 é o único número primo que também é par." }
+        };
+
         let currentSection = 1;
         const totalSections = 5;
         const answers = {};
+        let sectionScores = [0, 0, 0, 0, 0]; // Pontuação por seção
         
         function submitSection(sectionNum) {
             // Validar campos de nome e série na primeira seção
@@ -610,6 +775,9 @@
             
             // Coletar respostas da seção atual
             collectAnswers(sectionNum);
+            
+            // Verificar respostas e mostrar feedback
+            checkAnswers(sectionNum);
             
             // Verificar se todas as questões foram respondidas
             const questionsInSection = 10;
@@ -646,6 +814,64 @@
             });
         }
         
+        function checkAnswers(sectionNum) {
+            let score = 0;
+            let feedbackHTML = "<h3>Resultado da Seção:</h3><ul>";
+            
+            for (let q = (sectionNum-1)*10 + 1; q <= sectionNum*10; q++) {
+                const questionId = 'q' + q;
+                const userAnswer = answers[questionId];
+                const correctAnswer = correctAnswers[questionId].answer;
+                const explanation = correctAnswers[questionId].explanation;
+                
+                const feedbackElement = document.getElementById(`${questionId}-feedback`);
+                
+                // Verificar se a resposta está correta (ignorando maiúsculas/minúsculas e espaços)
+                let isCorrect = false;
+                if (typeof correctAnswer === 'string') {
+                    isCorrect = userAnswer && userAnswer.toString().toLowerCase().trim() === correctAnswer.toLowerCase().trim();
+                } else {
+                    isCorrect = userAnswer && userAnswer.toString().trim() === correctAnswer.toString().trim();
+                }
+                
+                if (isCorrect) {
+                    score++;
+                    feedbackElement.innerHTML = `
+                        <div class="feedback correct">
+                            <div class="encouragement">✓ Correto! Parabéns!</div>
+                            <div class="correction">Explicação: ${explanation}</div>
+                        </div>
+                    `;
+                    feedbackHTML += `<li>Questão ${q - (sectionNum-1)*10}: <span style="color:green">✓ Correta</span> - ${explanation}</li>`;
+                } else {
+                    feedbackElement.innerHTML = `
+                        <div class="feedback incorrect">
+                            <div class="improvement">✗ Incorreto. Você respondeu: ${userAnswer || 'Não respondido'}. Resposta correta: ${correctAnswer}.</div>
+                            <div class="correction">Explicação: ${explanation}</div>
+                        </div>
+                    `;
+                    feedbackHTML += `<li>Questão ${q - (sectionNum-1)*10}: <span style="color:red">✗ Incorreta</span> (Sua resposta: ${userAnswer || 'Não respondido'}). Correção: ${explanation}</li>`;
+                }
+                
+                feedbackElement.style.display = 'block';
+            }
+            
+            sectionScores[sectionNum-1] = score;
+            
+            feedbackHTML += `</ul><p>Pontuação: ${score}/10 (${(score/10*100).toFixed(0)}%)</p>`;
+            
+            if (score >= 8) {
+                feedbackHTML += `<p class="encouragement">Ótimo desempenho! Continue assim!</p>`;
+            } else if (score >= 5) {
+                feedbackHTML += `<p class="improvement">Bom trabalho, mas há espaço para melhorar. Revise os conceitos!</p>`;
+            } else {
+                feedbackHTML += `<p class="improvement">Você precisa revisar este conteúdo. Não desanime, pratique mais!</p>`;
+            }
+            
+            document.getElementById(`section${sectionNum}-result`).innerHTML = feedbackHTML;
+            document.getElementById(`section${sectionNum}-result`).style.display = 'block';
+        }
+        
         function proceedToNextSection(sectionNum) {
             // Esconder seção atual
             document.getElementById(`section${sectionNum}`).classList.remove('active');
@@ -665,19 +891,17 @@
         }
         
         function showFinalResult() {
-            // Calcular pontuação (simplificado para exemplo)
-            let score = 0;
+            // Calcular pontuação total
+            let totalScore = sectionScores.reduce((a, b) => a + b, 0);
             const totalQuestions = 50;
+            const percentage = Math.round((totalScore / totalQuestions) * 100);
             
-            // Aqui você poderia implementar a lógica para verificar respostas corretas
-            // Por simplicidade, estamos apenas contando as respostas não vazias
-            for (let i = 1; i <= totalQuestions; i++) {
-                if (answers['q'+i] !== undefined && answers['q'+i] !== '') {
-                    score++;
-                }
+            // Calcular desempenho por seção
+            let sectionPerformance = "";
+            for (let i = 0; i < totalSections; i++) {
+                const sectionName = ["Frações e Decimais", "Múltiplos e Divisores", "Geometria", "Volume", "Problemas"][i];
+                sectionPerformance += `<p>Seção ${i+1} (${sectionName}): ${sectionScores[i]}/10</p>`;
             }
-            
-            const percentage = Math.round((score / totalQuestions) * 100);
             
             // Exibir resultado
             const resultDiv = document.getElementById('finalResult');
@@ -686,8 +910,13 @@
                 <h2>Resultado Final</h2>
                 <p>Nome: ${document.getElementById('name').value}</p>
                 <p>Série: ${document.getElementById('grade').value}</p>
-                <p>Você respondeu ${score} de ${totalQuestions} questões (${percentage}%).</p>
+                <p>Você acertou ${totalScore} de ${totalQuestions} questões (${percentage}%).</p>
+                ${sectionPerformance}
                 <p>${getPerformanceMessage(percentage)}</p>
+                <h3>Dicas para Melhorar:</h3>
+                <ul>
+                    ${getImprovementTips()}
+                </ul>
             `;
             
             // Rolagem suave para o resultado
@@ -695,10 +924,43 @@
         }
         
         function getPerformanceMessage(percentage) {
-            if (percentage >= 90) return "Excelente desempenho! Parabéns!";
-            if (percentage >= 70) return "Bom desempenho! Continue estudando!";
-            if (percentage >= 50) return "Desempenho regular. Revise os conteúdos!";
-            return "Desempenho abaixo do esperado. Recomendamos reforçar os estudos.";
+            if (percentage >= 90) return "<p style='color:green;font-weight:bold'>Excelente desempenho! Você demonstrou domínio dos conceitos matemáticos avaliados!</p>";
+            if (percentage >= 70) return "<p style='color:green'>Bom desempenho! Você compreende a maioria dos conceitos, mas pode melhorar em alguns pontos.</p>";
+            if (percentage >= 50) return "<p style='color:orange'>Desempenho regular. Revise os conteúdos com atenção, especialmente onde teve dificuldades.</p>";
+            return "<p style='color:red'>Desempenho abaixo do esperado. Recomendamos reforçar os estudos com exercícios adicionais e revisão dos conceitos básicos.</p>";
+        }
+        
+        function getImprovementTips() {
+            let tips = "";
+            const weakSections = [];
+            
+            for (let i = 0; i < sectionScores.length; i++) {
+                if (sectionScores[i] < 7) {
+                    weakSections.push(i+1);
+                }
+            }
+            
+            if (weakSections.length === 0) {
+                return "<li>Continue praticando para manter seu excelente desempenho!</li>";
+            }
+            
+            if (weakSections.includes(1)) {
+                tips += "<li><strong>Frações e Decimais:</strong> Pratique a conversão entre frações e decimais, e operações com frações.</li>";
+            }
+            if (weakSections.includes(2)) {
+                tips += "<li><strong>Múltiplos e Divisores:</strong> Revise os conceitos de MMC, MDC e números primos.</li>";
+            }
+            if (weakSections.includes(3)) {
+                tips += "<li><strong>Geometria:</strong> Treine o cálculo de perímetro e área de figuras planas.</li>";
+            }
+            if (weakSections.includes(4)) {
+                tips += "<li><strong>Volume:</strong> Pratique o cálculo de volume e a conversão entre unidades de medida.</li>";
+            }
+            if (weakSections.includes(5)) {
+                tips += "<li><strong>Problemas Diversos:</strong> Leia com atenção os enunciados e pratique a resolução de problemas.</li>";
+            }
+            
+            return tips || "<li>Revise os conceitos onde teve mais dificuldades e pratique com exercícios similares.</li>";
         }
     </script>
 </body>
